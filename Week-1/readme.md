@@ -26,5 +26,5 @@ The browser’s high level components are :
 <strong>UI Backend :</strong> This component is used to draw basic widgets that are platform independent like windows,combo boxes,etc.<br/>
 <strong>Data Storage :</strong> This is a small strorage system for the browser where localstorage,cookies,bookmarks,etc are kept so that it can be used in whenever the data is needed.<br/>
 
-Now when we received the files the browser starts parsing those files into DOM (Document Object Modal) and CSSOM. The first thing that the browser does is build a DOM tree and then it is converted into tokens
+Now when we received the files the browser starts parsing those files into DOM (Document Object Modal) and CSSOM. The first thing that the browser does is build a DOM tree. It also parses CSS files as well. While DOM is being prepared an another tree is contructed called render tree which is responsible for the order in which the content will be displayed. This helps the render engine to paint the content in correct oreder. The next step is to paint and show it in to the browser
 
