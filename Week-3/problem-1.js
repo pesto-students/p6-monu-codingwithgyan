@@ -1,34 +1,16 @@
-function isAvailable(args, map) {
-    let found = {
-      status: false,
-      value: null,
-    };
-    map.entries((item) => {
-      if (JSON.stringify(args) === JSON.stringify(item[1])) {
-        found.status = true;
-        found.value = item[0];
-        return;
-      }
-    });
-    return found;
-  }
+
   function memoize(fn) {
     let map = new Map();
     return function (...args) {
-      
-      // Incase one argument is only passed
-      if(args.length===1)
-      return args[0];
-  
+      const stringArgs = JSON.stringify(args);
       // checking the cache
-      const { status, value } = isAvailable(args, map);
-      if (status && value) {
-        return value;
+      if(map.has(stringArgs))
+      {
+        return map.get(stringArgs)
       }
-  
       // execeutes if value is not found in cache
-      let result = fn(...args);
-      map.set(result, args);
+      let result = args.length===1?args[0]:fn(...args);
+      map.set(stringArgs,result);
       return result;
     };
   }
@@ -40,8 +22,9 @@ function isAvailable(args, map) {
   
   //Create a method called memoize such that:
   const memoizeAdd = memoize(add);
-  console.log(memoizeAdd(100, 100));
-  console.log(memoizeAdd(100)); 
-  console.log(memoizeAdd(100, 200)); 
-  console.log(memoizeAdd(100, 100)); 
+  memoizeAdd(100, 100);
+  memoizeAdd(100); 
+  memoizeAdd(100, 200); 
+  memoizeAdd(100, 100); 
   
+
