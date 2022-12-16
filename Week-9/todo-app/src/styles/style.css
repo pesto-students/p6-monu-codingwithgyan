@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700&family=Poppins:wght@300&display=swap');
+body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins';
+    background: #FFFFFF;
+}
+.search-box
+{
+    width: 96%;
+    height: 5vh;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+.search-box > input
+{
+    border: none;
+    outline: none;
+    width: 220px;
+    height: 24px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    border-left: 1px solid #b7b7b7;
+    border-top: 1px solid #b7b7b7;
+    border-bottom: 1px solid #b7b7b7;
+    padding-left: 8px;
+}
+
+.search-box > button
+{
+    border: none;
+    outline: none;
+    height: 28px;
+    width: 44px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    background: #ffffff;
+    border: 1px solid rgb(190, 161, 231);
+    border-top: 1px solid #b7b7b7;
+    border-bottom: 1px solid #b7b7b7;
+    border-right: 1px solid #b7b7b7;
+    cursor: pointer;
+}
+.search-box > button:active
+{ 
+    background: rgb(223, 223, 224);
+}
+.todo-list
+{
+    height: 82vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: baseline; 
+    gap:4px 12px;
+    padding: 26px 16px;
+    position: relative;
+    z-index: 100;
+}
+.todo-bg
+{
+    position: absolute;
+    z-index: 0;
+    left: 0px;
+    width: 100%;
+    height: 88vh;
+    margin-top: 10px;
+    filter: blur(1px);
+    background: rgb(178,140,232);
+    background: -moz-linear-gradient(90deg, rgba(178,140,232,1) 0%, rgba(185,171,245,1) 29%, rgba(163,217,251,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(178,140,232,1) 0%, rgba(185,171,245,1) 29%, rgba(163,217,251,1) 100%);
+    background: linear-gradient(90deg, rgba(178,140,232,1) 0%, rgba(185,171,245,1) 29%, rgba(163,217,251,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b28ce8",endColorstr="#a3d9fb",GradientType=1);
+}
+.todo-row
+{
+    height: fit-content;
+    width: fit-content;
+    padding: 4px;
+    border-radius: 4px;
+    border: 3px solid transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.todo-row:hover
+{
+    transform: scale(105%,105%);
+    transition: transform 0.2s ease-in-out;
+}
+.todo-content
+{
+    background: #BAD7E9;
+    color: black;
+    padding: 4px 26px;
+    display: flex;
+    align-items: center;
+}
+.todo-content-done
+{
+    background: #11c98e;
+}
+.todo-action
+{
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    border: 3px solid #BAD7E9;
+}
+.todo-action>div
+{
+    cursor: pointer;
+    height: 50%;
+    border: 3px solid #BAD7E9;
+}
+.todo-action>div:nth-child(1)
+{
+    color: green;
+}
+.todo-action>div:nth-child(2)
+{
+    color: red;
+}
