@@ -1,0 +1,129 @@
+body
+{
+    padding: 0px;
+    margin: 0px;
+}
+.container
+{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    margin-top: 15%;
+}
+.text-box
+{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main
+{
+    height: 200px;
+    width: 200px;
+    display: grid;
+    grid-template-columns: auto auto;
+    position: absolute;
+    z-index: 2;
+    margin-top: -200px;
+}
+
+
+
+.main > div
+{
+    height: 100px;
+    width: 100px;
+}
+.main:hover > .box
+{
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count:infinite;
+}
+.main:hover > .div-1{
+    animation-name: rotatePositiveX;
+    
+}
+.main:hover > .div-2{
+    animation-name: rotateNegativeX;
+}
+.main:hover > .div-3{
+    animation-name: rotatePositiveY;
+}
+.main:hover > .div-4{
+    animation-name: rotateNegativeY;
+}
+.main > div:nth-child(1)
+{
+    background: red;  
+}
+.main > div:nth-child(2)
+{
+    background: yellow;
+}
+.main > div:nth-child(3)
+{
+    background: blue;
+}
+.main > div:nth-child(4)
+{
+    background: green;
+}
+
+@keyframes rotatePositiveX
+{
+    0%{
+        transform: translateX(0px);
+    }
+    20%{
+        transform: translateX(0px);
+    }
+    100%
+    {
+        transform: translateX(-250px) rotate(90deg);
+    }
+}
+
+@keyframes rotateNegativeX
+{
+    0%{
+        transform: translateX(0px);
+    }
+    20%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(250px) rotate(-90deg);
+    }
+}
+
+
+@keyframes rotatePositiveY
+{
+    0%{
+        transform: translateX(0px);
+    }
+    20%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-250px) rotate(-90deg);
+    }
+}
+
+@keyframes rotateNegativeY
+{
+    0%{
+        transform: translateX(0px);
+    }
+    20%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(250px) rotate(90deg);
+    }
+}

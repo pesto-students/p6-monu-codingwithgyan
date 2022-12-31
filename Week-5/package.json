@@ -1,0 +1,15 @@
+{
+  "name": "week-5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "problem-1.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.2.2"
+  }
+}
