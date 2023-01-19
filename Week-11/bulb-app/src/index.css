@@ -1,0 +1,31 @@
+html,
+body,
+#root,
+.room {
+  height: 100%;
+  margin: 0;
+}
+.App
+{
+  height: 600px;
+}
+
+.room {
+  margin: 40px;
+  text-align: center;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.lit {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
