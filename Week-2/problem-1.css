@@ -1,0 +1,102 @@
+body
+{
+    padding: 20px;
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.main-container
+{
+    height: fit-content;
+    width: 100%;
+}
+header
+{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.content
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.content >div
+{
+    width: 50%;
+    margin: 0 auto;
+}
+.img
+{
+    height: 100%;
+    width: 100%;
+}
+aside
+{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+article
+{
+    height: fit-content;
+    width: 330px;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.125);
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
+    background: #edf1fa;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+label
+{
+    display: block;
+}
+.inline-block
+{
+    display: inline-block;
+}
+input[type='submit']
+{
+    border: none;
+    outline: none;
+    padding: 4px;
+    width: 100px;
+    background: #123abc;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: aliceblue;
+}
+input:not(input[type='radio'],input[type='checkbox'],input[type='submit']),select
+{
+    border: none;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.125);
+    border-radius: 4px;
+    height: 26px;
+    width: 240px;
+}
+
+footer
+{
+    padding: 10px;
+    width: 98%;
+    text-align: center;
+    color: white;
+    background: #05102a;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
